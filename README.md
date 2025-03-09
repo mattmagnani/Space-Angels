@@ -1,2 +1,2 @@
-# personal-website
-My personal/professional website
+# space-angels
+Space Angels website
