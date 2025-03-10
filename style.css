@@ -21,9 +21,9 @@ body {
     z-index: 2; /* Above the fixed backgrounds */
 }
 
-/* Fixed stars background */
+/* Stars background */
 .stars {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -32,9 +32,9 @@ body {
     z-index: 0;
 }
 
-/* Fixed gradient background */
+/* Gradient background */
 .gradient-bg {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -52,11 +52,12 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
 }
 
-/* Fixed orbital rings container in the center of the viewport */
+/* Orbital rings container in the center of the viewport */
 .hero-image {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -151,12 +152,55 @@ section:not(.hero) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 0;
+    padding: 1.5rem 3rem;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10; /* Above all other elements */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.logo img {
+    height: 120px;
+    margin-right: 1rem;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    background: rgba(30, 30, 30, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links li {
+    margin: 0 0.5rem;
+}
+
+.nav-links li a {
+    color: #d87027;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* Button styling */
@@ -221,5 +265,13 @@ section:not(.hero) {
     .btn {
         width: 100%;
         text-align: center;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .logo img {
+        height: 60px;
     }
 }

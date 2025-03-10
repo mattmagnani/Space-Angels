@@ -49,7 +49,7 @@
         
         /* Fixed background elements */
         .stars {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
@@ -72,7 +72,7 @@
         }
         
         .gradient-bg {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
@@ -87,7 +87,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 0;
+            padding: 1.5rem 3rem;
             width: 100%;
             position: absolute;
             top: 0;
@@ -98,16 +98,18 @@
         .logo {
             display: flex;
             align-items: center;
+            margin-left: 2rem;
         }
         
         .logo img {
-            height: 80px; /* Reduced from 150px */
+            height: 120px;
             margin-right: 1rem;
         }
         
         .nav {
             display: flex;
             align-items: center;
+            margin-right: 2rem;
         }
         
         .nav-links {
@@ -144,11 +146,12 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            padding-top: 80px; /* Account for header */
+            padding-top: 80px;
+            overflow: hidden;
         }
         
         .hero-image {
-            position: fixed;
+            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -316,22 +319,11 @@
     </style>
 </head>
 <body>
-    <!-- Fixed background elements -->
-    <div class="stars" id="stars"></div>
-    <div class="gradient-bg"></div>
-    <div class="hero-image">
-        <div class="orbital-path"></div>
-        <div class="orbital-path"></div>
-        <div class="orbital-path"></div>
-        <div class="glow-effect"></div>
-    </div>
-    
     <!-- Scrollable content -->
     <div class="container">
         <header class="header">
             <div class="logo">
                 <img src="images/logo.png" alt="Space Angels Logo">
-                <h2>SpaceAngels</h2>
             </div>
             <nav class="nav">
                 <ul class="nav-links">
@@ -342,8 +334,18 @@
             </nav>
         </header>
         
-        <!-- Hero section -->
+        <!-- Hero section with background elements inside -->
         <section class="hero">
+            <!-- Background elements now inside hero -->
+            <div class="stars" id="stars"></div>
+            <div class="gradient-bg"></div>
+            <div class="hero-image">
+                <div class="orbital-path"></div>
+                <div class="orbital-path"></div>
+                <div class="orbital-path"></div>
+                <div class="glow-effect"></div>
+            </div>
+            
             <div class="hero-content">
                 <h1>Fueling visionary founders on their journey to the stars</h1>
                 <p>Space Angels is a premier syndicate investing in the pioneers building tomorrow's space economy and infrastructure.</p>
