@@ -1,7 +1,7 @@
-// Create stars with enhanced sparkling
+// Create stars with reduced brightness and twinkling
 function createStars() {
     const starsContainer = document.getElementById('stars');
-    const numberOfStars = 300;
+    const numberOfStars = 200; // Reduced from 300
     
     for (let i = 0; i < numberOfStars; i++) {
         const star = document.createElement('div');
@@ -11,17 +11,17 @@ function createStars() {
         const x = Math.floor(Math.random() * window.innerWidth);
         const y = Math.floor(Math.random() * window.innerHeight);
         
-        // Random size - increased max size
-        const size = Math.random() * 3 + 0.5;
+        // Random size - decreased max size
+        const size = Math.random() * 2 + 0.5; // Reduced max size from 3 to 2
         
-        // Random duration - shorter for more active twinkling
-        const duration = 2 + Math.random() * 5;
+        // Longer duration for less active twinkling
+        const duration = 4 + Math.random() * 6; // Increased from 2-7s to 4-10s
         
         // Random delay
         const delay = Math.random() * 10;
         
-        // Random brightness
-        const brightness = 0.5 + Math.random() * 0.5;
+        // Reduced brightness
+        const brightness = 0.3 + Math.random() * 0.4; // Reduced from 0.5-1.0 to 0.3-0.7
         
         star.style.left = `${x}px`;
         star.style.top = `${y}px`;
@@ -31,8 +31,8 @@ function createStars() {
         star.style.animationDelay = `${delay}s`;
         star.style.backgroundColor = `rgba(255, 255, 255, ${brightness})`;
         
-        // Randomly add a special sparkling class to some stars
-        if (Math.random() > 0.7) {
+        // Reduce number of sparkling stars
+        if (Math.random() > 0.9) { // Changed from 0.7 to 0.9 (fewer sparkling stars)
             star.classList.add('sparkle');
         }
         
